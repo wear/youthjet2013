@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>home</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var type=navigator.appName   
+    if (type=="Netscape"){   
+        var lang = navigator.language   
+    }   
+    else{   
+        var lang = navigator.userLanguage   
+    }
+    //取得国家代码的前两个字母   
+    var lang = lang.substr(0,2)   
+    // 英语   
+    if (lang == "en"){   
+      window.location.href="/en/index.html"   
+    }   
+    // 中文 - 不分繁体和简体   
+    else if (lang == "zh"){   
+      window.location.href="/ch/index.html"   
+    }  
+    else if(lang == 'fr'){
+      window.location.href="/fr/index.html"
+    }
+    // 除上面所列的语言   
+    else{   
+        window.location.href="/ch/index.html" 
+    }   
+  </script>
+</body>
+</html>
